@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 
 // Route::inertia('/', 'welcome', [
 //     'canRegister' => Features::enabled(Features::registration()),
@@ -25,4 +26,15 @@ Route::post(
 );
 
 Route::get('/', [ProductController::class, 'index']);
+<<<<<<< Updated upstream
 
+=======
+Route::get(
+    '/products/{product}',
+    [ProductController::class, 'show']
+);
+Route::post(
+    '/cart',
+    [CartController::class, 'store']
+);
+>>>>>>> Stashed changes

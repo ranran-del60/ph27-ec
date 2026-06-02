@@ -4,10 +4,16 @@
 @section('title', '商品一覧')
 
 @section('content')
-     <h2> 商品一観</h2>
-     @foreach ($products as $product)
-        <ul class="card">
-            <li>{{ $product['name'] }}</li>
+=======
+    <h2>商品一覧</h2>
+    @foreach ($products as $product)
+        <ul>
+            <li>
+                <a href="/products/{{ $product->id }}">
+                    {{ $product['name'] }}
+                </a>
+            </li>
+>>>>>>> Stashed changes
         </ul>
-    @endforeach
+    
 @endsection     
