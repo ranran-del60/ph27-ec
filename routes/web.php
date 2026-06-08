@@ -34,3 +34,11 @@ Route::post(
     '/cart',
     [CartController::class, 'store']
 );
+Route::get(
+    '/cart',
+    [CartController::class, 'index']
+);
+Route::get(
+    '/cart/clear',
+    [CartController::class, 'clear']
+);
